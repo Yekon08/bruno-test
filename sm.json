@@ -1,0 +1,7 @@
+{
+  "apiEndpoint": "https://bruno-test-maxime.prismic.io/api/v2",
+  "libraries": ["@/slices"],
+  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
+
+  "_latest": "0.7.1"
+}
