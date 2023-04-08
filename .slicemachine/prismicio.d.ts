@@ -53,6 +53,17 @@ interface NavigationDocumentData {
      */
     linkbtn: prismicT.LinkField;
     /**
+     * LogoHover field in *navigation*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.logohover
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    logohover: prismicT.ImageField<never>;
+    /**
      * Slice Zone field in *navigation*
      *
      * - **Field Type**: Slice Zone

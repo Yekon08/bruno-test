@@ -8,7 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        blackText: "#101010",
+        grayBorder: "#CDCED0",
         mainOlive: "#5D750F",
+        mainGold: "#E4C87F",
+        whiteLowOpacity: "rgba(255, 255, 255, 0.2)",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

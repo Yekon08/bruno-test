@@ -42,6 +42,14 @@
           "select": null
         }
       },
+      "logohover": {
+        "type": "Image",
+        "config": {
+          "label": "LogoHover",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
