@@ -1,0 +1,161 @@
+{
+  "name": {
+    "__TYPE__": "FieldContent",
+    "value": "fewer",
+    "type": "Text"
+  },
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "colony"
+  },
+  "logo": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468",
+      "width": 4000,
+      "height": 6000
+    },
+    "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468",
+    "width": 4000,
+    "height": 6000,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "textbtn": {
+    "__TYPE__": "FieldContent",
+    "value": "get",
+    "type": "Text"
+  },
+  "linkbtn": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "ExternalLink",
+      "url": "https://slicemachine.dev"
+    }
+  },
+  "logohover": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+      "width": 4160,
+      "height": 3120
+    },
+    "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+    "width": 4160,
+    "height": 3120,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "navigation_item$f7b55e25-0213-401f-a540-475c78313e48",
+        "name": "navigation_item",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "name": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Reprehenderit dolore ea sint et tempor. Tempor esse Lorem esse est exercitation id aute et proident mollit commodo sint. Officia nisi tempor velit esse quis nostrud voluptate sit ea pariatur."
+                  }
+                }
+              ]
+            },
+            "link": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://prismic.io"
+              }
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "child_name",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "position",
+                    "type": "Text"
+                  }
+                ],
+                [
+                  "child_link",
+                  {
+                    "__TYPE__": "LinkContent",
+                    "value": {
+                      "__TYPE__": "ExternalLink",
+                      "url": "https://slicemachine.dev"
+                    }
+                  }
+                ],
+                [
+                  "description",
+                  {
+                    "__TYPE__": "StructuredTextContent",
+                    "value": [
+                      {
+                        "type": "paragraph",
+                        "content": {
+                          "text": "Aliqua eu esse laborum qui esse minim nostrud Lorem consectetur qui. Excepteur elit reprehenderit eu eu velit aute in officia id reprehenderit."
+                        }
+                      }
+                    ]
+                  }
+                ],
+                [
+                  "icon",
+                  {
+                    "__TYPE__": "ImageContent",
+                    "origin": {
+                      "id": "main",
+                      "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+                      "width": 3168,
+                      "height": 4752
+                    },
+                    "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+                    "width": 3168,
+                    "height": 4752,
+                    "edit": {
+                      "zoom": 1,
+                      "crop": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "background": "transparent"
+                    },
+                    "thumbnails": {}
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -4,9 +4,16 @@
       "default": {
         "primary": {}
       }
+    },
+    "NavigationItem": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   },
   "_cts": {
-    "page": {}
+    "page": {},
+    "navigation": {}
   }
 }
