@@ -4,6 +4,7 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
     "./src/app/**/*.{js,ts,jsx,tsx}",
+    "./slices/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -21,6 +22,9 @@ module.exports = {
       },
       height: {
         navMobile: "calc(100vh - 64px)",
+      },
+      width: {
+        desktop: "1208px",
       },
     },
   },

@@ -156,6 +156,56 @@ interface HeroSliceDefaultPrimary {
      *
      */
     description: prismicT.RichTextField;
+    /**
+     * LeftImg field in *Hero → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero.primary.leftimg
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    leftimg: prismicT.ImageField<never>;
+    /**
+     * RightImg field in *Hero → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero.primary.rightimg
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    rightimg: prismicT.ImageField<never>;
+    /**
+     * LinkBtn field in *Hero → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero.primary.linkbtn
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    linkbtn: prismicT.LinkField;
+    /**
+     * DescriptionCard field in *Hero → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero.primary.descriptioncard
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    descriptioncard: prismicT.RichTextField;
+    /**
+     * TextBtn field in *Hero → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero.primary.textbtn
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    textbtn: prismicT.KeyTextField;
 }
 /**
  * Default variation for Hero Slice

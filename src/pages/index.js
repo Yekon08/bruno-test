@@ -1,8 +1,7 @@
-import { SliceZone } from "@prismicio/react";
-
 import { createClient } from "../../prismicio";
 import { components } from "../../slices";
 import Navbar from "@/components/navbar/Navbar";
+import { SliceZone } from "@prismicio/react";
 
 export default function Home({ page, navigation }) {
   return (
