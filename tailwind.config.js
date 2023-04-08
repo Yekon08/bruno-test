@@ -19,6 +19,9 @@ module.exports = {
         inter: ["Inter", "sans-serif"],
         satoshi: "Satoshi",
       },
+      height: {
+        navMobile: "calc(100vh - 64px)",
+      },
     },
   },
   plugins: [],

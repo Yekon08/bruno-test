@@ -1,9 +1,10 @@
-const Paragraph = ({ children, type, className }) => {
+const Paragraph = ({ children, type, className = "" }) => {
   const handleStyles = () => {
     switch (type) {
       case "small":
-        "text-sm leading-[18px]";
-
+        return "text-sm leading-[18px]";
+      case "big":
+        return "text-lg leading-[24px]";
       default:
         "";
     }

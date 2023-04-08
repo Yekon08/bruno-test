@@ -8,6 +8,7 @@ const Button = ({
   py = "py-3",
   px = "px-4",
   fontSize = "text-sm",
+  className,
 }) => {
   const handleStyles = () => {
     switch (type) {
@@ -15,13 +16,12 @@ const Button = ({
         return "text-white bg-whiteLowOpacity";
       case "gold":
         return "text-blackText bg-mainGold";
-
       default:
         "";
     }
   };
 
-  const styles = `font-satoshi rounded-xl transition-all ${py} ${px} ${fontSize} ${handleStyles()}`;
+  const styles = `font-satoshi rounded-xl transition-all ${py} ${px} ${fontSize} ${className} ${handleStyles()}`;
 
   if (prismicLink) {
     return (
