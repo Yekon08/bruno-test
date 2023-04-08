@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         blackText: "#101010",
         grayBorder: "#CDCED0",
+        grayLight: "#F6F7FA",
         mainOlive: "#5D750F",
         mainGold: "#E4C87F",
         whiteLowOpacity: "rgba(255, 255, 255, 0.2)",

@@ -9,3 +9,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+nav li:hover a {
+  position: relative;
+  top: 1px;
+}
+
+.submenu {
+  position: absolute;
+  top: 105%;
+  left: -100%;
+  width: 100%;
+  height: auto;
+  padding-top: 12px;
+  padding-bottom: 26px;
+  background: white;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+}
+
+nav li:hover > .submenu {
+  visibility: visible;
+  left: 0;
+}
