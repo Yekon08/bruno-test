@@ -16,7 +16,7 @@ const Navbar = ({ data }) => {
         items-center text-white hover:text-blackText hover:bg-white
         transition-all relative ${isHover && "z-50"}`}
       >
-        <div className="w-desktop h-full mx-auto flex items-center justify-between">
+        <div className="md:w-full md:px-6 xl:px-0 xl:w-desktop h-full mx-auto flex items-center justify-between">
           <ul className="flex gap-6 w-1/3 h-full">
             {data.slices.map((slice) => {
               return (
@@ -42,10 +42,10 @@ const Navbar = ({ data }) => {
 
                   {slice.items.length > 0 && (
                     <div className="invisible transition-all submenu shadow z-50">
-                      <ul className="w-desktop h-full mx-auto flex items-center gap-10">
+                      <ul className="md:w-full md:flex-wrap xl:w-desktop h-full mx-auto flex items-center gap-10">
                         {slice.items.map((item) => {
                           return (
-                            <li key={JSON.stringify(item)} className="-ml-6">
+                            <li key={JSON.stringify(item)} className="xl:-ml-6">
                               <PrismicLink
                                 field={item.child_link}
                                 className="flex"
