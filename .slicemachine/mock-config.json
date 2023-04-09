@@ -16,6 +16,12 @@
         "primary": {},
         "items": {}
       }
+    },
+    "Testimonials": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   },
   "_cts": {

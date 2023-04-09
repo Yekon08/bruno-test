@@ -13,7 +13,7 @@ const Navbar = ({ data }) => {
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
         className={`hidden md:flex bg-mainOlive h-[72px] border-b border-transparent hover:border-greyBorder
-        items-center text-white hover:text-blackText hover:bg-white
+        items-center text-white hover:text-mainBlack hover:bg-white
         transition-all relative ${isHover && "z-50"}`}
       >
         <div className="md:w-full md:px-6 xl:px-0 xl:w-desktop h-full mx-auto flex items-center justify-between">

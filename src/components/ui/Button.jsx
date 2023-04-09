@@ -13,9 +13,9 @@ const Button = ({
       case "nav":
         return "text-white bg-whiteLowOpacity";
       case "gold":
-        return "text-blackText bg-mainGold hover:bg-black hover:text-white";
+        return "text-mainBlack bg-mainGold hover:bg-black hover:text-white";
       case "black":
-        return "text-white bg-blackText hover:bg-darkGrey";
+        return "text-white bg-mainBlack hover:bg-darkGrey";
       default:
         "";
     }

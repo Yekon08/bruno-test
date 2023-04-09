@@ -1,7 +1,7 @@
 const H6 = ({ children, className }) => {
   return (
     <h6
-      className={`font-satoshi text-blackText text-base leading-[18px] ${className}`}
+      className={`font-satoshi text-mainBlack text-base leading-[18px] ${className}`}
     >
       {children}
     </h6>

@@ -119,7 +119,7 @@ interface PageDocumentData {
  * Slice for *page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = HeroSlice | PresentationSectionSlice;
+type PageDocumentDataSlicesSlice = HeroSlice | PresentationSectionSlice | TestimonialsSlice;
 /**
  * page document from Prismic
  *
@@ -460,11 +460,106 @@ type PresentationSectionSliceVariation = PresentationSectionSliceDefault;
  *
  */
 export type PresentationSectionSlice = prismicT.SharedSlice<"presentation_section", PresentationSectionSliceVariation>;
+/**
+ * Primary content in Testimonials → Primary
+ *
+ */
+interface TestimonialsSliceDefaultPrimary {
+    /**
+     * Title field in *Testimonials → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: testimonials.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+}
+/**
+ * Item in Testimonials → Items
+ *
+ */
+export interface TestimonialsSliceDefaultItem {
+    /**
+     * Description field in *Testimonials → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: testimonials.items[].description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Img field in *Testimonials → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: testimonials.items[].img
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    img: prismicT.ImageField<never>;
+    /**
+     * Name field in *Testimonials → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: testimonials.items[].name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    name: prismicT.KeyTextField;
+    /**
+     * Job field in *Testimonials → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: testimonials.items[].job
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    job: prismicT.KeyTextField;
+    /**
+     * Signature field in *Testimonials → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: testimonials.items[].signature
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    signature: prismicT.ImageField<never>;
+}
+/**
+ * Default variation for Testimonials Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Testimonials`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TestimonialsSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TestimonialsSliceDefaultPrimary>, Simplify<TestimonialsSliceDefaultItem>>;
+/**
+ * Slice variation for *Testimonials*
+ *
+ */
+type TestimonialsSliceVariation = TestimonialsSliceDefault;
+/**
+ * Testimonials Shared Slice
+ *
+ * - **API ID**: `testimonials`
+ * - **Description**: `Testimonials`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TestimonialsSlice = prismicT.SharedSlice<"testimonials", TestimonialsSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, PresentationSectionSliceDefaultPrimary, PresentationSectionSliceDefaultItem, PresentationSectionSliceDefault, PresentationSectionSliceVariation, PresentationSectionSlice };
+        export type { NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, PresentationSectionSliceDefaultPrimary, PresentationSectionSliceDefaultItem, PresentationSectionSliceDefault, PresentationSectionSliceVariation, PresentationSectionSlice, TestimonialsSliceDefaultPrimary, TestimonialsSliceDefaultItem, TestimonialsSliceDefault, TestimonialsSliceVariation, TestimonialsSlice };
     }
 }

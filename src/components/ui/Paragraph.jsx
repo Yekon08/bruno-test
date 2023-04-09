@@ -10,7 +10,7 @@ const Paragraph = ({ children, type, className = "", div = false }) => {
     }
   };
 
-  const styles = `text-blackText ${className} ${handleStyles()}`;
+  const styles = `text-mainBlack ${className} ${handleStyles()}`;
   if (div) {
     return <div className={styles}>{children}</div>;
   }
