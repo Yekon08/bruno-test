@@ -9,7 +9,6 @@ import Image from "next/image";
 import { useState } from "react";
 
 const Slider = ({ data }) => {
-  console.log("data: ", data);
   const [firstSwiper, setFirstSwiper] = useState(null);
   const [secondSwiper, setSecondSwiper] = useState(null);
 

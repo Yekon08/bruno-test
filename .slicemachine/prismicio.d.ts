@@ -6,6 +6,134 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
+/** Content for footer documents */
+interface FooterDocumentData {
+    /**
+     * TitleContact field in *footer*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.titlecontact
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    titlecontact: prismicT.KeyTextField;
+    /**
+     * FirstBtnText field in *footer*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.firstbtntext
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    firstbtntext: prismicT.KeyTextField;
+    /**
+     * FirstBtnLink field in *footer*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.firstbtnlink
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    firstbtnlink: prismicT.LinkField;
+    /**
+     * SecondBtnText field in *footer*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.secondbtntext
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    secondbtntext: prismicT.KeyTextField;
+    /**
+     * SecondBtnLin field in *footer*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.secondbtnlink
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    secondbtnlink: prismicT.LinkField;
+    /**
+     * Logo field in *footer*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.logo
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    logo: prismicT.ImageField<never>;
+    /**
+     * Copyright field in *footer*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.copyright
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    copyright: prismicT.KeyTextField;
+    /**
+     * MadeBy field in *footer*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.madeby
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    madeby: prismicT.KeyTextField;
+    /**
+     * LegalMentions field in *footer*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.legalmentions
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    legalmentions: prismicT.LinkField;
+    /**
+     * Slice Zone field in *footer*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<FooterDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *footer → Slice Zone*
+ *
+ */
+type FooterDocumentDataSlicesSlice = FooterItemSlice;
+/**
+ * footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<FooterDocumentData>, "footer", Lang>;
 /** Content for navigation documents */
 interface NavigationDocumentData {
     /**
@@ -130,7 +258,66 @@ type PageDocumentDataSlicesSlice = HeroSlice | PresentationSectionSlice | Testim
  * @typeParam Lang - Language API ID of the document.
  */
 export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
-export type AllDocumentTypes = NavigationDocument | PageDocument;
+export type AllDocumentTypes = FooterDocument | NavigationDocument | PageDocument;
+/**
+ * Primary content in FooterItem → Primary
+ *
+ */
+interface FooterItemSliceDefaultPrimary {
+    /**
+     * Title field in *FooterItem → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer_item.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * List field in *FooterItem → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer_item.primary.list
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    list: prismicT.RichTextField;
+    /**
+     * ListLinks field in *FooterItem → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer_item.primary.listlinks
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    listlinks: prismicT.RichTextField;
+}
+/**
+ * Default variation for FooterItem Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `FooterItem`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FooterItemSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<FooterItemSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *FooterItem*
+ *
+ */
+type FooterItemSliceVariation = FooterItemSliceDefault;
+/**
+ * FooterItem Shared Slice
+ *
+ * - **API ID**: `footer_item`
+ * - **Description**: `FooterItem`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FooterItemSlice = prismicT.SharedSlice<"footer_item", FooterItemSliceVariation>;
 /**
  * Primary content in Hero → Primary
  *
@@ -560,6 +747,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, PresentationSectionSliceDefaultPrimary, PresentationSectionSliceDefaultItem, PresentationSectionSliceDefault, PresentationSectionSliceVariation, PresentationSectionSlice, TestimonialsSliceDefaultPrimary, TestimonialsSliceDefaultItem, TestimonialsSliceDefault, TestimonialsSliceVariation, TestimonialsSlice };
+        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, FooterItemSliceDefaultPrimary, FooterItemSliceDefault, FooterItemSliceVariation, FooterItemSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, PresentationSectionSliceDefaultPrimary, PresentationSectionSliceDefaultItem, PresentationSectionSliceDefault, PresentationSectionSliceVariation, PresentationSectionSlice, TestimonialsSliceDefaultPrimary, TestimonialsSliceDefaultItem, TestimonialsSliceDefault, TestimonialsSliceVariation, TestimonialsSlice };
     }
 }

@@ -22,10 +22,16 @@
         "primary": {},
         "items": {}
       }
+    },
+    "FooterItem": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {
     "page": {},
-    "navigation": {}
+    "navigation": {},
+    "footer": {}
   }
 }
