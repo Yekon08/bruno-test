@@ -8,7 +8,7 @@ import Content from "@/components/presentation/Content";
  * @param { PresentationSectionProps }
  */
 const PresentationSection = ({ slice }) => (
-  <section className="mt-16 md:mt-36">
+  <section className="mt-16 md:mt-44">
     <Title data={slice} />
     <Content data={slice} />
   </section>

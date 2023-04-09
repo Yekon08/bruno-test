@@ -12,9 +12,11 @@ import Slider from "@/components/Slider";
  * @param { TestimonialsProps }
  */
 const Testimonials = ({ slice }) => {
-  <section className="bg-mainBlack">
-    <Slider data={slice} />
-  </section>;
+  return (
+    <section className="bg-mainBlack pt-24 pb-20 text-white mt-44">
+      <Slider data={slice} />
+    </section>
+  );
 };
 
 export default Testimonials;
