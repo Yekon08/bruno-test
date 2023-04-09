@@ -10,17 +10,19 @@ import { useState } from "react";
 
 const Slider = ({ data }) => {
   console.log("data: ", data);
-  const [controlledSwiper, setControlledSwiper] = useState(null);
+  const [firstSwiper, setFirstSwiper] = useState(null);
+  const [secondSwiper, setSecondSwiper] = useState(null);
 
   if (data) {
     return (
-      <div className="flex justify-center">
-        <div className="flex flex-col w-[600px]">
+      <div className="flex flex-col xl:flex-row justify-center items-center">
+        <div className="flex flex-col w-full md:w-[600px]">
           <H2 className="text-white max-w-xl mb-10">{data.primary.title}</H2>
-          <div className="w-[576px]">
+          <div>
             <Swiper
               modules={[Pagination, Navigation, Controller]}
-              controller={{ control: controlledSwiper }}
+              onSwiper={setFirstSwiper}
+              controller={{ control: secondSwiper }}
               pagination={{
                 el: ".swiper-custom-pagination",
                 clickable: true,
@@ -44,7 +46,7 @@ const Slider = ({ data }) => {
               })}
             </Swiper>
           </div>
-          <div className="flex items-center mt-20">
+          <div className="hidden xl:flex items-center mt-20">
             <button className="prev bg-white w-8 h-8 rounded-full flex items-center justify-center cursor-pointer">
               <Image
                 src="/arrowDownBlack.svg"
@@ -66,18 +68,23 @@ const Slider = ({ data }) => {
             <div className="swiper-custom-pagination ml-6 flex-1" />
           </div>
         </div>
-        <div className="w-[400px] ml-24">
+        <div className="w-full xl:w-[400px] xl:ml-24 mt-8 xl:mt-0 text-center xl:text-left">
           <Swiper
-            modules={[Controller]}
+            modules={[Controller, Pagination]}
+            pagination={{
+              el: ".swiper-custom-pagination-mobile",
+              clickable: true,
+            }}
             slidesPerView={1}
-            onSwiper={setControlledSwiper}
+            onSwiper={setSecondSwiper}
+            controller={{ control: firstSwiper }}
             className="sliderImage h-full w-full "
             loop
           >
             {data.items.map((slide, i) => {
               return (
                 <SwiperSlide key={i}>
-                  <div className="relative mb-[72px]">
+                  <div className="relative mb-6 xl:mb-[72px] flex justify-center xl:justify-normal">
                     <Image
                       src={slide.img.url}
                       alt={slide.img.alt}
@@ -89,7 +96,7 @@ const Slider = ({ data }) => {
                       alt={slide.signature.alt}
                       width={slide.signature.dimensions.width}
                       height={slide.signature.dimensions.height}
-                      className="absolute -bottom-16 right-0"
+                      className="hidden xl:block absolute -bottom-16 right-0"
                     />
                   </div>
                   <p className="font-satoshi text-xl">{slide.name}</p>
@@ -100,6 +107,7 @@ const Slider = ({ data }) => {
               );
             })}
           </Swiper>
+          <div className="xl:hidden swiper-custom-pagination-mobile mt-14" />
         </div>
       </div>
     );
