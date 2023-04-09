@@ -20,10 +20,10 @@ const Hero = ({ slice }) => {
           <PrismicRichText field={slice.primary.descriptioncard} />
         </Paragraph>
         <Button
-          type="gold"
+          style="gold"
+          type="full"
           prismicLink
           link={slice.primary.linkbtn}
-          className="block text-center"
         >
           {slice.primary.textbtn}
         </Button>

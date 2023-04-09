@@ -12,7 +12,7 @@ const Navbar = ({ data }) => {
       <nav
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
-        className={`hidden md:flex bg-mainOlive h-[72px] border-b border-transparent hover:border-grayBorder
+        className={`hidden md:flex bg-mainOlive h-[72px] border-b border-transparent hover:border-greyBorder
         items-center text-white hover:text-blackText hover:bg-white
         transition-all relative ${isHover && "z-50"}`}
       >
@@ -50,7 +50,7 @@ const Navbar = ({ data }) => {
                                 field={item.child_link}
                                 className="flex"
                               >
-                                <div className="flex transition-all p-6 rounded-xl hover:bg-grayLight">
+                                <div className="flex transition-all p-6 rounded-xl hover:bg-greyLight">
                                   <div className="w-12 h-12 bg-mainOlive rounded-xl flex items-center justify-center mr-6">
                                     <Image
                                       src={item.icon.url}
@@ -94,7 +94,7 @@ const Navbar = ({ data }) => {
 
           <div className="w-1/3 flex justify-end">
             <Button
-              type={isHover ? "gold" : "nav"}
+              style={isHover ? "gold" : "nav"}
               prismicLink
               link={data.linkbtn}
               className="z-10"

@@ -1,5 +1,6 @@
 import React from "react";
 import Title from "@/components/presentation/Title";
+import Content from "@/components/presentation/Content";
 
 /**
  * @typedef {import("@prismicio/client").Content.PresentationSectionSlice} PresentationSectionSlice
@@ -7,9 +8,9 @@ import Title from "@/components/presentation/Title";
  * @param { PresentationSectionProps }
  */
 const PresentationSection = ({ slice }) => (
-  <section className="mt-36">
+  <section className="mt-16 md:mt-36">
     <Title data={slice} />
-    alo
+    <Content data={slice} />
   </section>
 );
 
