@@ -46,3 +46,8 @@ nav li:hover > .submenu {
 .swiper-custom-pagination-mobile .swiper-pagination-bullet-active {
   background: white !important;
 }
+
+.underlineEm em {
+  text-decoration: underline;
+  font-style: normal;
+}
