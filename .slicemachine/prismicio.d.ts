@@ -86,17 +86,6 @@ interface FooterDocumentData {
      */
     copyright: prismicT.KeyTextField;
     /**
-     * MadeBy field in *footer*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: footer.madeby
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    madeby: prismicT.KeyTextField;
-    /**
      * LegalMentions field in *footer*
      *
      * - **Field Type**: Link
@@ -107,6 +96,17 @@ interface FooterDocumentData {
      *
      */
     legalmentions: prismicT.LinkField;
+    /**
+     * madeBy field in *footer*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.madeby
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    madeby: prismicT.RichTextField;
     /**
      * Slice Zone field in *footer*
      *

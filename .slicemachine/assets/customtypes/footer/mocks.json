@@ -1,48 +1,48 @@
 {
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "poetry"
+    "value": "time"
   },
   "titlecontact": {
     "__TYPE__": "FieldContent",
-    "value": "industrial",
+    "value": "careful",
     "type": "Text"
   },
   "firstbtntext": {
     "__TYPE__": "FieldContent",
-    "value": "flight",
+    "value": "mirror",
     "type": "Text"
   },
   "firstbtnlink": {
     "__TYPE__": "LinkContent",
     "value": {
       "__TYPE__": "ExternalLink",
-      "url": "http://google.com"
+      "url": "https://slicemachine.dev"
     }
   },
   "secondbtntext": {
     "__TYPE__": "FieldContent",
-    "value": "combination",
+    "value": "forth",
     "type": "Text"
   },
   "secondbtnlink": {
     "__TYPE__": "LinkContent",
     "value": {
       "__TYPE__": "ExternalLink",
-      "url": "http://twitter.com"
+      "url": "http://google.com"
     }
   },
   "logo": {
     "__TYPE__": "ImageContent",
     "origin": {
       "id": "main",
-      "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117",
-      "width": 3810,
-      "height": 5715
+      "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
+      "width": 3199,
+      "height": 3199
     },
-    "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117",
-    "width": 3810,
-    "height": 5715,
+    "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
+    "width": 3199,
+    "height": 3199,
     "edit": {
       "zoom": 1,
       "crop": {
@@ -55,26 +55,32 @@
   },
   "copyright": {
     "__TYPE__": "FieldContent",
-    "value": "fish",
-    "type": "Text"
-  },
-  "madeby": {
-    "__TYPE__": "FieldContent",
-    "value": "brought",
+    "value": "belt",
     "type": "Text"
   },
   "legalmentions": {
     "__TYPE__": "LinkContent",
     "value": {
       "__TYPE__": "ExternalLink",
-      "url": "https://prismic.io"
+      "url": "http://google.com"
     }
+  },
+  "madeby": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Fugiat ipsum in velit do labore consectetur cupidatat sunt. Minim voluptate aute excepteur velit minim aliquip occaecat officia qui Lorem veniam sunt. Est culpa cupidatat veniam esse dolor est."
+        }
+      }
+    ]
   },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "footer_item$9e3b5905-08b6-45fd-875b-424488ade90a",
+        "key": "footer_item$ac1a1eae-9f40-47b2-a843-266c22fcaa93",
         "name": "footer_item",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -82,7 +88,7 @@
           "primary": {
             "title": {
               "__TYPE__": "FieldContent",
-              "value": "ear",
+              "value": "silence",
               "type": "Text"
             },
             "list": {
@@ -91,7 +97,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Sit esse nisi ipsum aute cupidatat elit proident exercitation commodo irure proident deserunt cillum ipsum fugiat. Velit duis incididunt ad cillum officia veniam consequat aliqua sunt sunt ad minim fugiat."
+                    "text": "Do ad velit aliquip exercitation nulla id minim anim labore eu eu eiusmod velit laboris Lorem. Velit consequat ea reprehenderit nisi excepteur ea proident ex ullamco. Veniam labore exercitation adipisicing eiusmod cupidatat nisi tempor ipsum minim laboris aliquip duis Lorem dolor et."
                   }
                 }
               ]
@@ -102,7 +108,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Pariatur nulla sunt cillum esse nisi voluptate et nulla deserunt in dolor ea est."
+                    "text": "Esse dolore irure sunt. Labore incididunt anim irure eu eiusmod laborum ipsum consectetur cupidatat."
                   }
                 }
               ]

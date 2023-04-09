@@ -1,20 +1,25 @@
-import { PrismicLink } from "@prismicio/react";
+import { PrismicLink, PrismicRichText } from "@prismicio/react";
 import { Button, Paragraph } from "./ui";
 import Image from "next/image";
 
 const Footer = ({ data }) => {
-  console.log("data: ", data);
   return (
-    <footer className="pt-[72px] pb-10">
-      <div className="w-desktop mx-auto">
-        <div className="w-desktop mx-auto flex justify-between pb-10 border-b border-greyBorder">
+    <footer className="md:pt-[72px] pb-10">
+      <div className="px-6 xl:px-0 xl:w-desktop mx-auto">
+        <div className="flex flex-col md:flex-row flex-wrap justify-between pb-10 border-b border-greyBorder">
           {data.slices.map((slice) => {
             return (
-              <div key={slice.id}>
-                <Paragraph className="font-satoshi mb-6" type="big">
+              <div
+                key={slice.id}
+                className="border-b border-greyBorder md:border-none pb-6 md:pb-0"
+              >
+                <Paragraph
+                  className="font-satoshi mb-6 mt-6 md:mt-0"
+                  type="big"
+                >
                   {slice.primary.title}
                 </Paragraph>
-                <ul className="grid grid-rows-6 grid-flow-col gap-x-10">
+                <ul className="md:grid md:grid-rows-6 md:grid-flow-col md:gap-x-10">
                   {slice.primary.list.map((list, i) => (
                     <li key={i} className="mb-4 last:mb-0">
                       <a href={slice.primary.listlinks[i].text} target="_blank">
@@ -28,7 +33,7 @@ const Footer = ({ data }) => {
               </div>
             );
           })}
-          <div className="flex flex-col">
+          <div className="flex flex-col mt-6 md:mt-0">
             <Paragraph className="font-satoshi mb-6" type="big">
               {data.titlecontact}
             </Paragraph>
@@ -37,7 +42,7 @@ const Footer = ({ data }) => {
               style="gold"
               prismicLink
               link={data.firstbtnlink}
-              className="mb-2"
+              className="mb-2 text-center md:text-left"
             >
               {data.firstbtntext}
             </Button>
@@ -46,13 +51,14 @@ const Footer = ({ data }) => {
               style="black"
               prismicLink
               link={data.secondbtnlink}
+              className="text-center md:text-left"
             >
               {data.secondbtntext}
             </Button>
           </div>
         </div>
-        <div className="mt-8 flex items-center">
-          <div className="w-1/3">
+        <div className="mt-8 flex flex-col-reverse md:flex-row items-center">
+          <div className="md:w-1/3 mt-6 md:mt-0">
             <Image
               src={data.logo.url}
               alt={data.logo.alt}
@@ -60,20 +66,17 @@ const Footer = ({ data }) => {
               height={data.logo.dimensions.height}
             />
           </div>
-          <div className="flex items-center w-1/3 text-center justify-center">
+          <div className="flex flex-wrap gap-4 md:gap-0 items-center md:w-1/3 text-center justify-center border-b border-greyBorder md:border-none pb-6 md:pb-0">
             <Paragraph type="tiny">{data.copyright}</Paragraph>
-            <Paragraph
-              type="tiny"
-              prismicLink
-              link={data.legalmentions}
-              className="mx-4"
-            >
-              legal mentions
+            <PrismicLink field={data.legalmentions} className="md:mx-4">
+              <Paragraph type="tiny">legal mentions</Paragraph>
+            </PrismicLink>
+            <Paragraph type="tiny" className="underlineEm" div>
+              <PrismicRichText field={data.madeby} />
             </Paragraph>
-            <Paragraph type="tiny">{data.madeby}</Paragraph>
           </div>
         </div>
-        <span className="block w-1/3" />
+        <span className="block md:w-1/3" />
       </div>
     </footer>
   );
