@@ -3,15 +3,18 @@
 import Hero from './Hero';
 import NavigationItem from './NavigationItem';
 import PresentationSection from './PresentationSection';
+import Testimonials from './Testimonials';
 
 export {
 	Hero,
 	NavigationItem,
 	PresentationSection,
+	Testimonials,
 };
 
 export const components = {
 	hero: Hero,
 	navigation_item: NavigationItem,
 	presentation_section: PresentationSection,
+	testimonials: Testimonials,
 };

@@ -29,6 +29,9 @@
             },
             "presentation_section": {
               "type": "SharedSlice"
+            },
+            "testimonials": {
+              "type": "SharedSlice"
             }
           }
         }

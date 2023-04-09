@@ -1,3 +1,4 @@
+import Slider from "@/components/Slider";
 import { createClient } from "../../prismicio";
 import { components } from "../../slices";
 import Navbar from "@/components/navbar/Navbar";
@@ -9,6 +10,7 @@ export default function Home({ page, navigation }) {
       <Navbar data={navigation.data} />
       <main>
         <SliceZone slices={page.data.slices} components={components} />
+        <Slider />
       </main>
     </>
   );

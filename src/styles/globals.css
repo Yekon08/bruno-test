@@ -36,3 +36,13 @@ nav li:hover > .submenu {
 .bgHero {
   background: linear-gradient(#5d750f 85%, #fff 15%);
 }
+
+.swiper-custom-pagination .swiper-pagination-bullet,
+.swiper-custom-pagination-mobile .swiper-pagination-bullet {
+  background: white !important;
+}
+
+.swiper-custom-pagination .swiper-pagination-bullet-active,
+.swiper-custom-pagination-mobile .swiper-pagination-bullet-active {
+  background: white !important;
+}

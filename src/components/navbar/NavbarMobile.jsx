@@ -53,7 +53,7 @@ const NavbarMobile = ({ data }) => {
         }`}
       >
         <Button
-          type={"gold"}
+          style={"gold"}
           prismicLink
           link={data.linkbtn}
           className="block text-center w-full mb-16"
