@@ -20,7 +20,7 @@ module.exports = {
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
-        satoshi: "Satoshi",
+        satoshi: ["Satoshi", "sans-serif"],
       },
       height: {
         navMobile: "calc(100vh - 64px)",
