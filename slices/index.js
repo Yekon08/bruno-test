@@ -2,13 +2,16 @@
 
 import Hero from './Hero';
 import NavigationItem from './NavigationItem';
+import PresentationSection from './PresentationSection';
 
 export {
 	Hero,
 	NavigationItem,
+	PresentationSection,
 };
 
 export const components = {
 	hero: Hero,
 	navigation_item: NavigationItem,
+	presentation_section: PresentationSection,
 };

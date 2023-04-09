@@ -14,6 +14,7 @@ module.exports = {
         grayLight: "#F6F7FA",
         mainOlive: "#5D750F",
         mainGold: "#E4C87F",
+        secondaryPurple: "#560039",
         whiteLowOpacity: "rgba(255, 255, 255, 0.2)",
       },
       fontFamily: {

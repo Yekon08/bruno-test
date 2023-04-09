@@ -9,8 +9,6 @@ import { PrismicRichText } from "@prismicio/react";
  * @param { HeroProps }
  */
 const Hero = ({ slice }) => {
-  console.log(slice);
-
   const cardHero = (mobile = false) => {
     return (
       <div
@@ -52,7 +50,7 @@ const Hero = ({ slice }) => {
       <div className="px-6 xl:px-0 xl:w-desktop mx-auto flex flex-col gap-6 md:gap-0 md:flex-row items-center md:justify-between">
         {cardHero(true)}
         <div
-          className={`relative w-full h-[260px] sm:h-[450px] md:w-[450px] md:h-[360px] xl:w-[${slice.primary.leftimg.dimensions.width}px] xl:h-[${slice.primary.leftimg.dimensions.height}px]`}
+          className={`relative w-full h-[260px] sm:h-[450px] md:w-[450px] md:h-[360px] xl:w-[580px] xl:h-[578px]`}
         >
           <Image
             src={slice.primary.leftimg.url}
@@ -64,7 +62,7 @@ const Hero = ({ slice }) => {
         <div className="relative w-full md:w-auto">
           {cardHero()}
           <div
-            className={`relative w-full h-[260px] sm:h-[450px] md:w-[450px] md:h-[360px] xl:w-[${slice.primary.rightimg.dimensions.width}px] xl:h-[${slice.primary.rightimg.dimensions.height}px]`}
+            className={`relative w-full h-[260px] sm:h-[450px] md:w-[450px] md:h-[360px] xl:w-[580px] xl:h-[578px]`}
           >
             <Image
               src={slice.primary.rightimg.url}
