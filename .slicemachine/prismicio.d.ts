@@ -119,7 +119,7 @@ interface PageDocumentData {
  * Slice for *page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = HeroSlice;
+type PageDocumentDataSlicesSlice = HeroSlice | PresentationSectionSlice;
 /**
  * page document from Prismic
  *
@@ -156,6 +156,56 @@ interface HeroSliceDefaultPrimary {
      *
      */
     description: prismicT.RichTextField;
+    /**
+     * LeftImg field in *Hero → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero.primary.leftimg
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    leftimg: prismicT.ImageField<never>;
+    /**
+     * RightImg field in *Hero → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero.primary.rightimg
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    rightimg: prismicT.ImageField<never>;
+    /**
+     * LinkBtn field in *Hero → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero.primary.linkbtn
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    linkbtn: prismicT.LinkField;
+    /**
+     * DescriptionCard field in *Hero → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero.primary.descriptioncard
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    descriptioncard: prismicT.RichTextField;
+    /**
+     * TextBtn field in *Hero → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero.primary.textbtn
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    textbtn: prismicT.KeyTextField;
 }
 /**
  * Default variation for Hero Slice
@@ -275,11 +325,146 @@ type NavigationItemSliceVariation = NavigationItemSliceDefault;
  *
  */
 export type NavigationItemSlice = prismicT.SharedSlice<"navigation_item", NavigationItemSliceVariation>;
+/**
+ * Primary content in PresentationSection → Primary
+ *
+ */
+interface PresentationSectionSliceDefaultPrimary {
+    /**
+     * TitleSection field in *PresentationSection → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: presentation_section.primary.titlesection
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    titlesection: prismicT.KeyTextField;
+    /**
+     * Title field in *PresentationSection → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: presentation_section.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Description field in *PresentationSection → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: presentation_section.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Item in PresentationSection → Items
+ *
+ */
+export interface PresentationSectionSliceDefaultItem {
+    /**
+     * Img field in *PresentationSection → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: presentation_section.items[].img
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    img: prismicT.ImageField<never>;
+    /**
+     * Icon field in *PresentationSection → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: presentation_section.items[].icon
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    icon: prismicT.ImageField<never>;
+    /**
+     * Title field in *PresentationSection → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: presentation_section.items[].title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Description field in *PresentationSection → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: presentation_section.items[].description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * BtnText field in *PresentationSection → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: presentation_section.items[].btntext
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    btntext: prismicT.KeyTextField;
+    /**
+     * BtnLink field in *PresentationSection → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: presentation_section.items[].btnlink
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    btnlink: prismicT.LinkField;
+    /**
+     * List field in *PresentationSection → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: presentation_section.items[].list
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    list: prismicT.RichTextField;
+}
+/**
+ * Default variation for PresentationSection Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `PresentationSection`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type PresentationSectionSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<PresentationSectionSliceDefaultPrimary>, Simplify<PresentationSectionSliceDefaultItem>>;
+/**
+ * Slice variation for *PresentationSection*
+ *
+ */
+type PresentationSectionSliceVariation = PresentationSectionSliceDefault;
+/**
+ * PresentationSection Shared Slice
+ *
+ * - **API ID**: `presentation_section`
+ * - **Description**: `PresentationSection`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type PresentationSectionSlice = prismicT.SharedSlice<"presentation_section", PresentationSectionSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice };
+        export type { NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefaultItem, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, PresentationSectionSliceDefaultPrimary, PresentationSectionSliceDefaultItem, PresentationSectionSliceDefault, PresentationSectionSliceVariation, PresentationSectionSlice };
     }
 }

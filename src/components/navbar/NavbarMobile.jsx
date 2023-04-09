@@ -48,7 +48,7 @@ const NavbarMobile = ({ data }) => {
       </div>
 
       <div
-        className={`w-full h-navMobile relative transition-all bg-white -ml-[100%] px-6 pt-14 ${
+        className={`w-full h-navMobile relative transition-all bg-white -ml-[100%] px-6 pt-14 z-20 ${
           isOpen && "ml-0"
         }`}
       >

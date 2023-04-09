@@ -17,7 +17,7 @@ nav li:hover a {
 
 .submenu {
   position: absolute;
-  top: 105%;
+  top: calc(100% + 1px);
   left: -100%;
   width: 100%;
   height: auto;
@@ -31,4 +31,8 @@ nav li:hover a {
 nav li:hover > .submenu {
   visibility: visible;
   left: 0;
+}
+
+.bgHero {
+  background: linear-gradient(#5d750f 85%, #fff 15%);
 }

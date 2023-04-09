@@ -1,4 +1,4 @@
-const Paragraph = ({ children, type, className = "" }) => {
+const Paragraph = ({ children, type, className = "", div = false }) => {
   const handleStyles = () => {
     switch (type) {
       case "small":
@@ -11,6 +11,9 @@ const Paragraph = ({ children, type, className = "" }) => {
   };
 
   const styles = `text-blackText ${className} ${handleStyles()}`;
+  if (div) {
+    return <div className={styles}>{children}</div>;
+  }
   return <p className={styles}>{children}</p>;
 };
 

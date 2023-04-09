@@ -6,18 +6,17 @@ import NavbarMobile from "./NavbarMobile";
 import { H6, Button, Paragraph } from "../ui";
 
 const Navbar = ({ data }) => {
-  console.log("nav: ", data);
   const [isHover, setIsHover] = useState(false);
   return (
     <>
       <nav
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
-        className="hidden md:flex bg-mainOlive h-[72px] border-b border-transparent hover:border-grayBorder
+        className={`hidden md:flex bg-mainOlive h-[72px] border-b border-transparent hover:border-greyBorder
         items-center text-white hover:text-blackText hover:bg-white
-        transition-all relative ${}"
+        transition-all relative ${isHover && "z-50"}`}
       >
-        <div className="w-[1208px] h-full mx-auto flex items-center justify-between">
+        <div className="md:w-full md:px-6 xl:px-0 xl:w-desktop h-full mx-auto flex items-center justify-between">
           <ul className="flex gap-6 w-1/3 h-full">
             {data.slices.map((slice) => {
               return (
@@ -42,16 +41,16 @@ const Navbar = ({ data }) => {
                   </PrismicLink>
 
                   {slice.items.length > 0 && (
-                    <div className="invisible transition-all submenu shadow">
-                      <ul className="w-[1208px] h-full mx-auto flex items-center gap-10">
+                    <div className="invisible transition-all submenu shadow z-50">
+                      <ul className="md:w-full md:flex-wrap xl:w-desktop h-full mx-auto flex items-center gap-10">
                         {slice.items.map((item) => {
                           return (
-                            <li key={JSON.stringify(item)} className="-ml-6">
+                            <li key={JSON.stringify(item)} className="xl:-ml-6">
                               <PrismicLink
                                 field={item.child_link}
                                 className="flex"
                               >
-                                <div className="flex transition-all p-6 rounded-xl hover:bg-grayLight">
+                                <div className="flex transition-all p-6 rounded-xl hover:bg-greyLight">
                                   <div className="w-12 h-12 bg-mainOlive rounded-xl flex items-center justify-center mr-6">
                                     <Image
                                       src={item.icon.url}
@@ -95,9 +94,10 @@ const Navbar = ({ data }) => {
 
           <div className="w-1/3 flex justify-end">
             <Button
-              type={isHover ? "gold" : "nav"}
+              style={isHover ? "gold" : "nav"}
               prismicLink
               link={data.linkbtn}
+              className="z-10"
             >
               {data.textbtn}
             </Button>

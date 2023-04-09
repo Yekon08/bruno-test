@@ -27,6 +27,47 @@
             "label": "Description",
             "placeholder": "A nice description of your feature"
           }
+        },
+        "leftimg": {
+          "type": "Image",
+          "config": {
+            "label": "LeftImg",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "rightimg": {
+          "type": "Image",
+          "config": {
+            "label": "RightImg",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "linkbtn": {
+          "type": "Link",
+          "config": {
+            "label": "LinkBtn",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        },
+        "descriptioncard": {
+          "type": "StructuredText",
+          "config": {
+            "label": "DescriptionCard",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "textbtn": {
+          "type": "Text",
+          "config": {
+            "label": "TextBtn",
+            "placeholder": ""
+          }
         }
       },
       "items": {},

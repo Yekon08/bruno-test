@@ -1,18 +1,18 @@
 {
   "title": {
     "__TYPE__": "FieldContent",
-    "value": "term",
+    "value": "government",
     "type": "Text"
   },
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "political"
+    "value": "depth"
   },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "hero$6b85e32c-3f7e-4914-b78c-1c2cdb36c121",
+        "key": "hero$d6748360-aba3-4743-a46d-02ca30982ad6",
         "name": "hero",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -24,7 +24,7 @@
                 {
                   "type": "heading1",
                   "content": {
-                    "text": "Captured"
+                    "text": "Factory"
                   }
                 }
               ]
@@ -35,7 +35,109 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Eu deserunt duis aliqua ut ex labore quis voluptate deserunt ut cillum. Sint aute deserunt id nulla. Incididunt fugiat id ad amet."
+                    "text": "Aliqua sint proident laborum excepteur. Nulla quis reprehenderit sunt deserunt proident adipisicing. Ullamco ea ipsum nisi qui Lorem anim amet commodo eu ad."
+                  }
+                }
+              ]
+            },
+            "leftimg": {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
+                "width": 6000,
+                "height": 4000
+              },
+              "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
+              "width": 6000,
+              "height": 4000,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            },
+            "rightimg": {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
+                "width": 6000,
+                "height": 4000
+              },
+              "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
+              "width": 6000,
+              "height": 4000,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            },
+            "linkbtn": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://prismic.io"
+              }
+            },
+            "descriptioncard": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Occaecat officia pariatur id deserunt."
+                  }
+                }
+              ]
+            },
+            "textbtn": {
+              "__TYPE__": "FieldContent",
+              "value": "speech",
+              "type": "Text"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "presentation_section$f060e040-c014-464c-9856-1a91c90db4bb",
+        "name": "presentation_section",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "titlesection": {
+              "__TYPE__": "FieldContent",
+              "value": "activity",
+              "type": "Text"
+            },
+            "title": {
+              "__TYPE__": "FieldContent",
+              "value": "struck",
+              "type": "Text"
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Amet irure quis fugiat magna enim. Qui elit officia mollit deserunt excepteur proident aute et excepteur quis ipsum veniam."
                   }
                 }
               ]
@@ -44,7 +146,110 @@
           "items": [
             {
               "__TYPE__": "GroupItemContent",
-              "value": []
+              "value": [
+                [
+                  "img",
+                  {
+                    "__TYPE__": "ImageContent",
+                    "origin": {
+                      "id": "main",
+                      "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+                      "width": 3344,
+                      "height": 2509
+                    },
+                    "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+                    "width": 3344,
+                    "height": 2509,
+                    "edit": {
+                      "zoom": 1,
+                      "crop": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "background": "transparent"
+                    },
+                    "thumbnails": {}
+                  }
+                ],
+                [
+                  "icon",
+                  {
+                    "__TYPE__": "ImageContent",
+                    "origin": {
+                      "id": "main",
+                      "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b",
+                      "width": 3560,
+                      "height": 5340
+                    },
+                    "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b",
+                    "width": 3560,
+                    "height": 5340,
+                    "edit": {
+                      "zoom": 1,
+                      "crop": {
+                        "x": 0,
+                        "y": 0
+                      },
+                      "background": "transparent"
+                    },
+                    "thumbnails": {}
+                  }
+                ],
+                [
+                  "title",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "power",
+                    "type": "Text"
+                  }
+                ],
+                [
+                  "description",
+                  {
+                    "__TYPE__": "StructuredTextContent",
+                    "value": [
+                      {
+                        "type": "paragraph",
+                        "content": {
+                          "text": "Eu reprehenderit laboris aliqua ullamco deserunt veniam. Nulla sint occaecat in excepteur anim enim."
+                        }
+                      }
+                    ]
+                  }
+                ],
+                [
+                  "btntext",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "during",
+                    "type": "Text"
+                  }
+                ],
+                [
+                  "btnlink",
+                  {
+                    "__TYPE__": "LinkContent",
+                    "value": {
+                      "__TYPE__": "ExternalLink",
+                      "url": "https://slicemachine.dev"
+                    }
+                  }
+                ],
+                [
+                  "list",
+                  {
+                    "__TYPE__": "StructuredTextContent",
+                    "value": [
+                      {
+                        "type": "paragraph",
+                        "content": {
+                          "text": "Veniam ullamco adipisicing est dolor. Amet Lorem amet non amet amet excepteur culpa mollit cupidatat. Nostrud non elit id."
+                        }
+                      }
+                    ]
+                  }
+                ]
+              ]
             }
           ]
         }

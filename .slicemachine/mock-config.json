@@ -10,6 +10,12 @@
         "primary": {},
         "items": {}
       }
+    },
+    "PresentationSection": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   },
   "_cts": {
